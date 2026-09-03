@@ -4,508 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>PlatForm</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #101114;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+            margin: 0;
+            background: #111111;
+            color: white;
+            font-family: Georgia, "Times New Roman", serif;
 
-        a {
-            color: inherit;
-            text-decoration: none;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .container {
-            width: min(1100px, 92%);
-            margin: 0 auto;
-        }
-
-        /* NAVIGATION */
-
-        nav {
-            border-bottom: 1px solid #292b31;
-            background: #101114;
-        }
-
-        .nav-inner {
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            color: #a9abb3;
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        .nav-links a:hover {
-            color: #ffffff;
-        }
-
-        /* BUTTONS */
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 13px 22px;
-            border-radius: 10px;
-            border: none;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            background: #ffffff;
-            color: #101114;
-        }
-
-        .button:hover {
-            background: #dddddf;
-        }
-
-        .button.secondary {
-            background: #24262c;
-            color: #ffffff;
-            border: 1px solid #363941;
-        }
-
-        .button.secondary:hover {
-            background: #2d3037;
-        }
-
-        /* HERO */
-
-        .hero {
-            padding: 100px 0 90px;
             text-align: center;
         }
 
-        .hero h1 {
-            font-size: clamp(52px, 9vw, 92px);
-            line-height: 1;
-            font-weight: 900;
-            letter-spacing: -4px;
-            margin-bottom: 22px;
+        h1 {
+            font-size: 56px;
+            margin-bottom: 35px;
         }
 
-        .hero p {
-            max-width: 620px;
-            margin: 0 auto 32px;
-            color: #a9abb3;
+        .button {
+            display: block;
+            width: 220px;
+            padding: 14px 20px;
+            margin: 12px auto;
+
+            background: white;
+            color: #111111;
+
+            border-radius: 10px;
+            text-decoration: none;
+
             font-size: 18px;
+            font-weight: bold;
         }
 
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        /* GAME PREVIEW */
-
-        .game-preview {
-            margin-bottom: 100px;
-        }
-
-        .preview-box {
-            min-height: 500px;
-            border-radius: 18px;
-            border: 1px solid #292b31;
-            background: #181a1f;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #656871;
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        /* SECTIONS */
-
-        section {
-            padding: 80px 0;
-            border-top: 1px solid #292b31;
-        }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: 800;
-            margin-bottom: 12px;
-            letter-spacing: -1px;
-        }
-
-        .section-description {
-            color: #9699a2;
-            max-width: 650px;
-            margin-bottom: 40px;
-        }
-
-        /* FEATURES */
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .feature {
-            background: #181a1f;
-            border: 1px solid #292b31;
-            border-radius: 14px;
-            padding: 28px;
-        }
-
-        .feature h3 {
-            font-size: 19px;
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-
-        .feature p {
-            color: #9699a2;
-            font-size: 15px;
-        }
-
-        /* DOWNLOAD */
-
-        .download-box {
-            background: #181a1f;
-            border: 1px solid #292b31;
-            border-radius: 16px;
-            padding: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .download-info h3 {
-            font-size: 23px;
-            font-weight: 800;
-            margin-bottom: 6px;
-        }
-
-        .download-info p {
-            color: #9699a2;
-        }
-
-        .download-buttons {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        /* SCREENSHOTS */
-
-        .screenshots {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .screenshot {
-            aspect-ratio: 16 / 9;
-            background: #181a1f;
-            border: 1px solid #292b31;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #656871;
-            font-weight: 700;
-        }
-
-        /* FOOTER */
-
-        footer {
-            border-top: 1px solid #292b31;
-            padding: 35px 0;
-            color: #777a83;
-            font-size: 14px;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-links a:hover {
-            color: #ffffff;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 750px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero {
-                padding: 70px 0;
-            }
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .screenshots {
-                grid-template-columns: 1fr;
-            }
-
-            .download-box {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+        .button:hover {
+            background: #dddddd;
         }
     </style>
 </head>
 
 <body>
 
-    <nav>
-        <div class="container nav-inner">
-
-            <a href="#" class="logo">PlatForm</a>
-
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#screenshots">Screenshots</a>
-                <a href="#download">Download</a>
-            </div>
-
-        </div>
-    </nav>
-
-
-    <main>
-
-        <!-- HERO -->
-
-        <header class="hero">
-            <div class="container">
-
-                <h1>PlatForm</h1>
-
-                <p>
-                    A platforming game built with Scratch.
-                    Jump, explore, and see how far you can make it.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#download" class="button">
-                        Download
-                    </a>
-
-                    <a href="#about" class="button secondary">
-                        Learn More
-                    </a>
-                </div>
-
-            </div>
-        </header>
-
-
-        <!-- GAME PREVIEW -->
-
-        <div class="container game-preview">
-
-            <div class="preview-box">
-                GAME PREVIEW
-            </div>
-
-        </div>
-
-
-        <!-- ABOUT -->
-
-        <section id="about">
-
-            <div class="container">
-
-                <h2 class="section-title">
-                    About PlatForm
-                </h2>
-
-                <p class="section-description">
-                    PlatForm is a platforming game made in Scratch.
-                    This is where you can describe the game's mechanics,
-                    levels, story, or anything else players should know.
-                </p>
-
-
-                <div class="features">
-
-                    <div class="feature">
-                        <h3>Platforming</h3>
-                        <p>
-                            Jump, move, and navigate through challenging
-                            platforming sections.
-                        </p>
-                    </div>
-
-                    <div class="feature">
-                        <h3>Levels</h3>
-                        <p>
-                            Explore different levels and discover what
-                            PlatForm has waiting for you.
-                        </p>
-                    </div>
-
-                    <div class="feature">
-                        <h3>Made in Scratch</h3>
-                        <p>
-                            Built from the ground up using the Scratch
-                            game engine.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- SCREENSHOTS -->
-
-        <section id="screenshots">
-
-            <div class="container">
-
-                <h2 class="section-title">
-                    Screenshots
-                </h2>
-
-                <p class="section-description">
-                    Take a look at PlatForm.
-                </p>
-
-                <div class="screenshots">
-
-                    <div class="screenshot">
-                        SCREENSHOT 1
-                    </div>
-
-                    <div class="screenshot">
-                        SCREENSHOT 2
-                    </div>
-
-                    <div class="screenshot">
-                        SCREENSHOT 3
-                    </div>
-
-                    <div class="screenshot">
-                        SCREENSHOT 4
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- DOWNLOAD -->
-
-        <section id="download">
-
-            <div class="container">
-
-                <h2 class="section-title">
-                    Download
-                </h2>
-
-                <p class="section-description">
-                    Download PlatForm for your computer.
-                </p>
-
-                <div class="download-box">
-
-                    <div class="download-info">
-                        <h3>PlatForm</h3>
-                        <p>Latest version • Free to download</p>
-                    </div>
-
-                    <div class="download-buttons">
-
-                        <a href="#" class="button">
-                            Windows
-                        </a>
-
-                        <a href="#" class="button secondary">
-                            macOS
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <footer>
-
-        <div class="container footer-inner">
-
-            <div>
-                © 2026 PlatForm
-            </div>
-
-            <div class="footer-links">
-                <a href="https://github.com/mistarkitty/PlatForm">
-                    GitHub
-                </a>
-            </div>
-
-        </div>
-
-    </footer>
-
-
-    <script>
-       
-    </script>
+    <div class="container">
+        <h1>PlatForm</h1>
+
+        <a class="button" href="downloads.html">
+            Download
+        </a>
+
+        <a class="button"
+           href="https://scratch.mit.edu/">
+            Play on Scratch
+        </a>
+    </div>
 
 </body>
 </html>
