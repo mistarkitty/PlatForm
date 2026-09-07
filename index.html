@@ -119,13 +119,82 @@
         <a class="button" href="projects.html">Projects</a>
     </main>
 
-    <div class="newest-release">
+<style>
+    .newest-release {
+        max-width: 900px;
+        margin: 0 auto 35px;
+        padding: 25px 40px;
+        background: #1b1b1b;
+        border: 1px solid #555;
+        border-radius: 8px;
+        box-shadow:
+            0 3px 10px #000,
+            inset 1px 1px 0 #333;
+    }
+
+    .release-title {
+        margin-bottom: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        color: #aaa;
+    }
+
+    .newest-release h2 {
+        margin: 0 0 18px;
+        font-size: 27px;
+        color: #fff;
+    }
+
+    .release-thumbnail {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin-bottom: 18px;
+        border: 1px solid #555;
+        border-radius: 6px;
+    }
+
+    .release-description {
+        margin-bottom: 20px;
+    }
+
+    .contact-button {
+        display: inline-block;
+        margin-left: 12px;
+        padding: 5px 12px;
+        background: #2b2b2b;
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        border: 1px solid #777;
+        border-radius: 5px;
+        box-shadow:
+            inset 1px 1px 0 #555,
+            inset -1px -1px 0 #111,
+            0 1px 2px #000;
+    }
+
+    .contact-button:hover {
+        background: #3a3a3a;
+    }
+
+    .contact-button:active {
+        background: #222;
+    }
+</style>
+
+<div class="newest-release">
 
     <div class="release-title">NEWEST RELEASE!</div>
 
     <h2>project name</h2>
 
-    <img class="release-thumbnail" src="newest-release.png" alt="Project thumbnail">
+    <img
+        class="release-thumbnail"
+        src="newest-release.png"
+        alt="Project thumbnail"
+    >
 
     <p class="release-description">
         <i>project disc</i>
@@ -136,9 +205,10 @@
     </a>
 
 </div>
-    <footer>
-        © 2026 BUDGETHELOCK
-    </footer>
 
-</body>
-</html>
+<footer>
+    © 2026 BUDGETHELOCK
+    <a class="contact-button" href="mailto:mistarkitty67@gmail.com">
+        Contact Me
+    </a>
+</footer>
