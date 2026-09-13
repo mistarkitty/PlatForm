@@ -8,8 +8,8 @@
     <link rel="icon" type="image/png" href="favicon.png">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1101933241418136"
-     crossorigin="anonymous"></script>
-    
+        crossorigin="anonymous"></script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -17,16 +17,18 @@
 
         body {
             margin: 0;
-            background: #111;
+            background: #101010;
             color: #eee;
             font-family: Tahoma, Arial, sans-serif;
         }
 
         header {
-            padding: 22px 40px;
+            padding: 18px 40px;
             background: #1b1b1b;
-            border-bottom: 1px solid #555;
-            box-shadow: 0 2px 5px #000;
+            border-bottom: 1px solid #666;
+            box-shadow:
+                0 2px 5px #000,
+                inset 0 1px 0 #333;
         }
 
         .logo {
@@ -36,16 +38,17 @@
             font-weight: bold;
             color: #fff;
             background: #252525;
-            border: 1px solid #666;
-            border-radius: 6px;
+            border: 1px solid #777;
+            border-radius: 5px;
             text-decoration: none;
             box-shadow:
                 inset 1px 1px 0 #444,
-                inset -1px -1px 0 #111;
+                inset -1px -1px 0 #111,
+                0 1px 2px #000;
         }
 
         .logo:hover {
-            background: #303030;
+            background: #353535;
         }
 
         main {
@@ -64,11 +67,12 @@
             margin-bottom: 25px;
             padding: 25px;
             background: #1b1b1b;
-            border: 1px solid #555;
-            border-radius: 8px;
+            border: 1px solid #666;
+            border-radius: 6px;
             box-shadow:
                 0 3px 10px #000,
-                inset 1px 1px 0 #333;
+                inset 1px 1px 0 #333,
+                inset -1px -1px 0 #111;
         }
 
         .project h2 {
@@ -89,12 +93,12 @@
             margin-top: 18px;
             margin-right: 8px;
             padding: 9px 20px;
-            background: #2b2b2b;
+            background: #292929;
             color: #fff;
             text-decoration: none;
             font-size: 15px;
             border: 1px solid #777;
-            border-radius: 6px;
+            border-radius: 5px;
             box-shadow:
                 inset 1px 1px 0 #555,
                 inset -1px -1px 0 #111,
@@ -102,7 +106,8 @@
         }
 
         .button:hover {
-            background: #3a3a3a;
+            background: #353535;
+            border-color: #aaa;
         }
 
         .button:active {
@@ -119,6 +124,21 @@
             font-size: 12px;
             text-align: center;
         }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            main {
+                margin: 25px 15px;
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
 
@@ -129,54 +149,70 @@
     </header>
 
     <main>
+
         <h1>Projects</h1>
 
         <div class="project">
+
             <h2>PlatForm</h2>
 
             <p>
                 Build your own levels, share your own levels, have fun
             </p>
 
-            <a class="button" href="https://scratch.mit.edu/projects/1377055940/">
+            <a
+                class="button"
+                href="https://scratch.mit.edu/projects/1377055940/"
+            >
                 Play on Scratch
             </a>
 
             <a class="button" href="platform.html">
                 Downloads
             </a>
+
         </div>
 
         <div class="project">
+
             <h2>PIXEL SHOOTER X</h2>
 
             <p>
                 Shoot your enemies, Fight to the death!
             </p>
 
-            <a class="button" href="https://scratch.mit.edu/projects/1376380817/">
+            <a
+                class="button"
+                href="https://scratch.mit.edu/projects/1376380817/"
+            >
                 Play on Scratch
             </a>
 
             <a class="button" href="pixel-shooter-x.html">
                 Downloads
             </a>
+
         </div>
 
         <div class="project">
+
             <h2>Ball Horror Remastered</h2>
 
             <p>
                 Your friend went missing, good luck!
             </p>
 
-            <a class="button" href="https://scratch.mit.edu/projects/1044713962/">
+            <a
+                class="button"
+                href="https://scratch.mit.edu/projects/1044713962/"
+            >
                 Play on Scratch
             </a>
 
             <a class="button" href="ball-horror.html">
                 Downloads
             </a>
+
         </div>
 
     </main>
