@@ -3,62 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Difficulty - BUDGETHELOCK STUDIO</title>
+
+    <title>Game Difficulties - BUDGETHELOCK</title>
+    <link rel="icon" type="image/png" href="favIcon.png">
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
-            background: #1e1e1e;
-            color: #ffffff;
+            background: #101010;
+            color: #eee;
             font-family: Tahoma, Arial, sans-serif;
         }
 
         header {
-            background: #2b2b2b;
-            border-bottom: 2px solid #444;
-            padding: 14px 20px;
+            padding: 18px 40px;
+            background: #1b1b1b;
+            border-bottom: 1px solid #666;
+            box-shadow:
+                0 2px 5px #000,
+                inset 0 1px 0 #333;
         }
 
-        header a {
-            color: #ffffff;
-            text-decoration: none;
+        .logo {
+            display: inline-block;
+            padding: 6px 10px;
             font-size: 22px;
             font-weight: bold;
+            color: #fff;
+            background: #252525;
+            border: 1px solid #777;
+            border-radius: 5px;
+            text-decoration: none;
+            box-shadow:
+                inset 1px 1px 0 #444,
+                inset -1px -1px 0 #111,
+                0 1px 2px #000;
+        }
+
+        .logo:hover {
+            background: #353535;
         }
 
         main {
             max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
+            margin: 45px auto;
+            padding: 35px 40px;
+        }
+
+        h1 {
+            margin: 0 0 30px;
+            font-size: 40px;
+            color: #fff;
         }
 
         .difficulty-card {
-            background: #2b2b2b;
-            border: 1px solid #444;
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #1b1b1b;
+            border: 1px solid #666;
             border-radius: 6px;
-            padding: 20px;
+            box-shadow:
+                0 3px 10px #000,
+                inset 1px 1px 0 #333,
+                inset -1px -1px 0 #111;
+        }
+
+        .game-thumbnail {
+            display: block;
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
             margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border: 1px solid #555;
+            border-radius: 4px;
+            background: #101010;
         }
 
-        h2 {
-            margin-top: 0;
-            margin-bottom: 12px;
-            font-size: 21px;
+        .difficulty-card h2 {
+            margin: 0 0 10px;
+            font-size: 25px;
+            color: #fff;
         }
 
-        p {
+        .difficulty-card p {
             margin: 0;
+            color: #bbb;
+            font-size: 16px;
             line-height: 1.6;
-            color: #dddddd;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 18px;
+            margin-right: 8px;
+            padding: 9px 20px;
+            background: #292929;
+            color: #fff;
+            text-decoration: none;
             font-size: 15px;
+            border: 1px solid #777;
+            border-radius: 5px;
+            box-shadow:
+                inset 1px 1px 0 #555,
+                inset -1px -1px 0 #111,
+                0 1px 2px #000;
+        }
+
+        .button:hover {
+            background: #353535;
+            border-color: #aaa;
+        }
+
+        .button:active {
+            background: #222;
+            box-shadow:
+                inset 1px 1px 3px #000;
         }
 
         footer {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            color: #777;
+            font-size: 12px;
             text-align: center;
-            color: #888888;
-            font-size: 13px;
-            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            main {
+                margin: 25px 15px;
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .difficulty-card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -66,62 +157,130 @@
 <body>
 
     <header>
-        <a href="index.html">BUDGETHELOCK STUDIO</a>
+        <a class="logo" href="index.html">BUDGETHELOCK</a>
     </header>
 
     <main>
 
-        <section class="difficulty-card">
+        <h1>Game Difficulties</h1>
+
+        <div class="difficulty-card">
+
+            <img
+                class="game-thumbnail"
+                src="platform.png"
+                alt="PlatForm"
+            >
+
             <h2>PlatForm - Very Hard</h2>
+
             <p>
                 PlatForm can get seriously difficult. You have to time your jumps,
                 make it through gaps, and reach the end without dying. If you die,
-                you start over from the beginning. There's basically no limit to how
-                difficult a level can get.
+                you start over from the beginning. The game is progressively harder,
+                and new updates can make it even more difficult.
             </p>
-        </section>
 
-        <section class="difficulty-card">
+            <a class="button" href="platform.html">
+                Play Game
+            </a>
+
+        </div>
+
+        <div class="difficulty-card">
+
+            <img
+                class="game-thumbnail"
+                src="ballhorror.png"
+                alt="Ball Horror Remastered"
+            >
+
             <h2>Ball Horror Remastered - Very Hard</h2>
+
             <p>
                 Ball Horror has 10 levels with 10 different monsters, along with
                 buttons, codes, levers, running sections, and more. You have to get
                 through the entire game without dying, so one mistake can ruin the
                 whole run.
             </p>
-        </section>
 
-        <section class="difficulty-card">
+            <a class="button" href="ball-horror.html">
+                Play Game
+            </a>
+
+        </div>
+
+        <div class="difficulty-card">
+
+            <img
+                class="game-thumbnail"
+                src="hallway.png"
+                alt="HallWay"
+            >
+
             <h2>HallWay - Medium</h2>
-            <p>
-                HallWay is all about reacting quickly and knowing what to do. You
-                have to listen for the audio cue that tells you an entity is coming,
-                find the closest locker, figure out the fastest way there, and keep
-                track of how long you can stay hidden.
-            </p>
-        </section>
 
-        <section class="difficulty-card">
+            <p>
+                HallWay is all about reacting quickly and knowing what to do.
+                You have to listen for the audio cue that tells you an entity
+                is coming, find the closest locker, figure out the fastest way
+                there, and keep track of how long you can stay hidden.
+            </p>
+
+            <a class="button" href="hallway.html">
+                Play Game
+            </a>
+
+        </div>
+
+        <div class="difficulty-card">
+
+            <img
+                class="game-thumbnail"
+                src="pixelshooterx.png"
+                alt="PIXEL SHOOTER X"
+            >
+
             <h2>PIXEL SHOOTER X - Medium</h2>
+
             <p>
                 You have to fight off monsters while keeping your 3 hearts intact.
-                Good aim and movement are important, and taking too much damage can
-                end your run.
+                Good aim and movement are important, and taking too much damage
+                can end your run.
             </p>
-        </section>
 
-        <section class="difficulty-card">
+            <a class="button" href="pixel-shooter-x.html">
+                Play Game
+            </a>
+
+        </div>
+
+        <div class="difficulty-card">
+
+            <img
+                class="game-thumbnail"
+                src="stickrun.png"
+                alt="StickRun"
+            >
+
             <h2>StickRun - Easy</h2>
+
             <p>
-                StickRun is pretty simple. Jump over the spikes and try to keep going
-                as the game gets faster. The longer you survive, the harder it gets.
+                StickRun is pretty simple. Jump over the spikes and try to keep
+                going as the game gets faster. The longer you survive, the harder
+                it gets.
             </p>
-        </section>
+
+            <a class="button" href="stickrun.html">
+                Play Game
+            </a>
+
+        </div>
 
     </main>
 
     <footer>
-        BUDGETHELOCK STUDIO
+        © 2026 BUDGETHELOCK
     </footer>
 
 </body>
